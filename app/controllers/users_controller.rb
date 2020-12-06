@@ -6,9 +6,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(users_params)
     if @user.save
+      session[:user_id] = @user.id
       flash[:success] = 'User was created successfully'
       redirect_to user_path(@user)
     else
+      flash[:danger] = 'Please enter a valid name'
       render 'new'
     end
   end

@@ -1,0 +1,4 @@
+<%= simple_form_for :session, url: login_path do |f| %>
+  <%= f.input :name, placeholder: 'Enter your name', placeholder_html: { class: 'text-center'} %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
+<% end %>

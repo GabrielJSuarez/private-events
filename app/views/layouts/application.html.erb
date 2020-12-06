@@ -10,11 +10,8 @@
   </head>
 
   <body>
-    <% flash.each do |name, msg| %>
-      <div class="alert-<%= name %>">
-        <%= msg %>
-      </div>
-    <% end %>
+    <%= render 'layouts/navbar' %>
+    <% error_messages %>
     <%= yield %>
   </body>
 </html>
