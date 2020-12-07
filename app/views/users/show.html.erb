@@ -1,5 +1,8 @@
-<h1>
-  <%= @user.name %>
-</h1>
+<div class="col-md-6 mx-auto text-center">
+  <h1>
+    Events Created By <%= @user.name %>
+  </h1>
 
-<%= link_to 'Create another user', new_user_path, class: 'btn btn-primary' %>
+  <%= user_created_events(@user) %>
+
+</div>
