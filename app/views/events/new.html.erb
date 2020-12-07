@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-md-4 mx-auto text-center">
+    <%= simple_form_for @event do |f| %>
+      <%= f.input :event_name, placeholder: 'Enter your name', placeholder_html: { class: 'text-center'} %>
+      <%= f.date_field :event_date, placeholder: 'Enter the date', placeholder_html: { class: 'text-center'} %>
+      <%= f.input :description, placeholder: 'Enter event description' %>
+      <%= f.button :submit, class: 'btn btn-primary' %>
+    <% end %>
+
+    <%= link_to 'Go back ', user_path(current_user), class: 'btn btn-primary my-5' %>
+  </div>
+</div>

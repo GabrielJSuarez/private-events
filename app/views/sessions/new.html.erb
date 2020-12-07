@@ -1,4 +1,10 @@
-<%= simple_form_for :session, url: login_path do |f| %>
-  <%= f.input :name, placeholder: 'Enter your name', placeholder_html: { class: 'text-center'} %>
-  <%= f.button :submit, class: 'btn btn-primary' %>
-<% end %>
+<h2 class="text-center mb-3">Sing in</h2>
+
+<div class="row">
+  <div class="col-md-4 mx-auto text-center">
+    <%= simple_form_for :session, url: login_path do |f| %>
+      <%= f.input :name, placeholder: 'Enter your name', placeholder_html: { class: 'text-center'} %>
+      <%= f.button :submit, class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>

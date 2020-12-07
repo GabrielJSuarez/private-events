@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       flash[:success] = 'You have successfully logged in'
       redirect_to user_path(user)
     else
-      flash[:danger] = 'Wrong name'
+      flash[:danger] = 'Wrong name or Name does not exist!'
       render 'new'
     end
   end

@@ -3,6 +3,10 @@
     Events Created By <%= @user.name %>
   </h1>
 
+  <%= link_to 'Create New Event', new_event_path, class: 'btn btn-primary mt-3' %>
+
+  <%= link_to 'View All Events', events_path, class: 'btn btn-primary mt-3 ml-2' %>
+
   <%= user_created_events(@user) %>
 
 </div>

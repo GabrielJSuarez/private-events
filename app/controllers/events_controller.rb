@@ -1,6 +1,9 @@
 class EventsController < ApplicationController
+
+  before_action :require_user, except: %i[index show]
+
   def index
-    @event = Event.all
+    @events = Event.all
   end
 
   def new
@@ -8,10 +11,10 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(event_params)
+    @event = current_user.created_events.build(event_params)
     if @event.save
       flash[:success] = 'Event created successfully'
-      redirect_to event_path(@event)
+      redirect_to user_path(current_user)
     else
       flash[:danger] = 'Something went wrong'
       render 'new'
