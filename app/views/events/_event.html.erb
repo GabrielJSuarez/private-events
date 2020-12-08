@@ -1,0 +1,17 @@
+<div class="card text-center">
+  <div class="card-header">
+    <%= @event.creator.name %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">
+      <%= @event.event_name %>
+    </h5>
+    <p class="card-text">
+      <%= @event.description %>
+    </p>
+
+  </div>
+  <div class="card-footer text-muted">
+    Created <%= time_ago_in_words(@event.created_at) %> Ago
+  </div>
+</div>

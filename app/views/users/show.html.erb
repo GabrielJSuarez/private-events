@@ -9,4 +9,19 @@
 
   <%= user_created_events(@user) %>
 
+  <h2>
+    Events that <%= @user.name %> will be attending
+  </h2>
+
+  <ul class="list-group">
+    <li class="list-group-item font-weight-bold">
+      Event List!
+    </li>
+    <% @user.attended_events.each do |event| %>
+      <li class="list-group-item">
+        <%= event.event_name %>
+      </li>
+    <% end %>
+  </ul>
+
 </div>

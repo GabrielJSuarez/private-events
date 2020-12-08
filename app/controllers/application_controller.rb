@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-
   helper_method :current_user, :logged_in?
 
   def current_user
@@ -12,7 +11,7 @@ class ApplicationController < ActionController::Base
 
   def require_user
     unless logged_in?
-      flash[:danger] = "You must be logged in to perform this acction"
+      flash[:danger] = 'You must be logged in to perform this acction'
       redirect_to login_path
     end
   end

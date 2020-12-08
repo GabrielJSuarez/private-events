@@ -1,5 +1,4 @@
 class EventsController < ApplicationController
-
   before_action :require_user, except: %i[index show]
 
   def index
@@ -23,6 +22,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    session[:current_event] = @event.id
   end
 
   private
