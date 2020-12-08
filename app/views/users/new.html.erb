@@ -1,8 +1,12 @@
+<h1 class="text-center my-3">
+  Register to the Private Events Website!
+</h1>
+
 <div class="row">
   <div class="col-md-4 mx-auto text-center">
     <%= simple_form_for @user do |f| %>
-      <%= f.input :name, placeholder: 'Enter your name', placeholder_html: { class: 'text-center'} %>
-      <%= f.button :submit, class: 'btn btn-primary' %>
+      <%= f.input :name, label: 'Welcome!, please enter your name!', label_html: { class: 'my-3 font-weight-bold'}, placeholder: 'Enter your name', placeholder_html: { class: 'text-center'}, class: 'my-2' %>
+      <%= f.button :submit, 'Sign up', class: 'btn btn-primary my-2' %>
     <% end %>
   </div>
 </div>
