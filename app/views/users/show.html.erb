@@ -1,27 +1,25 @@
-<div class="col-md-6 mx-auto text-center">
+<div class="text-center my-3">
   <h1>
-    Events Created By <%= @user.name %>
+    <%= @user.name %>'s Event page
   </h1>
 
-  <%= link_to 'Create New Event', new_event_path, class: 'btn btn-primary mt-3' %>
+  <%= link_to 'Create New Event', new_event_path, class: 'btn btn-success mt-3' %>
 
   <%= link_to 'View All Events', events_path, class: 'btn btn-primary mt-3 ml-2' %>
+</div>
 
-  <%= user_created_events(@user) %>
+<div class="row mx-3">
+  <div class="col-md-6 mx-auto text-center">
+    <h2>
+      Host
+    </h2>
+    <%= user_created_events(@user) %>
+  </div>
 
-  <h2>
-    Events that <%= @user.name %> will be attending
-  </h2>
-
-  <ul class="list-group">
-    <li class="list-group-item font-weight-bold">
-      Event List!
-    </li>
-    <% @user.attended_events.each do |event| %>
-      <li class="list-group-item">
-        <%= event.event_name %>
-      </li>
-    <% end %>
-  </ul>
-
+  <div class="col-md-6 mx-auto text-center">
+    <h2>
+      Attendee
+    </h2>
+    <%= user_attended_events(@user) %>
+  </div>
 </div>

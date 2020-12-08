@@ -1,12 +1,17 @@
 <div class="row">
   <div class="col-md-4 mx-auto text-center">
     <%= simple_form_for @event do |f| %>
-      <%= f.input :event_name, placeholder: 'Enter your name', placeholder_html: { class: 'text-center'} %>
-      <%= f.date_field :event_date, placeholder: 'Enter the date', placeholder_html: { class: 'text-center'} %>
-      <%= f.input :description, placeholder: 'Enter event description' %>
-      <%= f.button :submit, class: 'btn btn-primary' %>
+      <div class="my-4">
+        <%= f.input :event_name, label: 'Enter Event\'s Name', label_html: { class: 'font-weight-bold' }, placeholder: 'Event\'s name', placeholder_html: { class: 'text-center'} %>
+      </div>
+      <div class="my-4">
+        <%= f.input :event_date, as: :datetime, html5: :true, label: 'Pick the event\'s date', label_html: { class: 'font-weight-bold' }, placeholder: 'Enter the date', placeholder_html: { class: 'text-center'} %>
+      </div>
+      <div class="my-4">
+        <%= f.input :description, placeholder: 'Enter event description', label: 'Enter the event\'s description', label_html: { class: 'font-weight-bold' } %>
+      </div>
+      <%= f.button :submit, class: 'btn btn-success' %>
+      <%= link_to 'Go back ', user_path(current_user), class: 'btn btn-warning my-2' %>
     <% end %>
-
-    <%= link_to 'Go back ', user_path(current_user), class: 'btn btn-primary my-5' %>
   </div>
 </div>
