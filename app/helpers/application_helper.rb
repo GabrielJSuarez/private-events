@@ -16,7 +16,7 @@ module ApplicationHelper
     return unless obj.errors.any?
 
     content_tag(:div, nil, class: 'card text-white bg-danger mb-3 w-25 mx-auto') do
-      content_tag(:h2, "#{pluralize(obj.errors.count, 'error')} stopped the article from saving: ", class: 'card-header') +
+      content_tag(:h2, "#{pluralize(obj.errors.count, 'error')}, article didn't save:", class: 'card-header') +
         content_tag(:div, nil, class: 'card-body') do
           obj.errors.full_messages.each do |msg|
             concat(

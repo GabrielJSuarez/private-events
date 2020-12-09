@@ -25,4 +25,3 @@ RSpec.describe 'Create an Event', type: :feature do
     expect(page).to have_content('Event name can\'t be blank')
   end
 end
-
