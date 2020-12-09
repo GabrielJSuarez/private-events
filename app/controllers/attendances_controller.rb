@@ -15,6 +15,7 @@ class AttendancesController < ApplicationController
     else
       flash[:danger] = 'Something went wrong, you might be already assisting this event'
     end
-    redirect_to events_path
+    @event = Event.find(session[:current_event])
+    render 'new'
   end
 end
