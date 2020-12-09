@@ -6,5 +6,4 @@ RSpec.describe 'Showing a user', type: :feature do
     visit user_path(@user)
     expect(page).to have_content('John Doe')
   end
-
 end
