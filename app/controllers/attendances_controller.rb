@@ -12,10 +12,11 @@ class AttendancesController < ApplicationController
     @attendance.attended_event_id = session[:current_event]
     if @attendance.save
       flash[:success] = "#{current_user.name} will attend the event!"
+      redirect_to event_path(session[:current_event])
     else
       flash[:danger] = 'Something went wrong, you might be already assisting this event'
+      @event = Event.find(session[:current_event])
+      render 'new'
     end
-    @event = Event.find(session[:current_event])
-    render 'new'
   end
 end

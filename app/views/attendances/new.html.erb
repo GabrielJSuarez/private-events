@@ -7,7 +7,7 @@
   <div class="col-md-4 mx-auto text-center">
     <%= show_single_event(@event) %>
 
-    <%= simple_form_for @attendance do |f| %>
+    <%= simple_form_for @attendance, url: attendances_path do |f| %>
       <%= f.button :submit, 'Attend to the event', class: 'btn btn-success' %>
       <%= link_to 'Go back ', user_path(current_user), class: 'btn btn-warning my-5' %>
     <% end %>

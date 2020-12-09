@@ -2,11 +2,13 @@
 
   <%= show_single_event(@event) %>
 
-  <%= assist_event?(@event) %>
+  <% if current_user != @event.creator %>
+    <%= assist_event?(@event) %>
+  <% end %>
 
   <%= link_to 'View all users events', user_path(@event.creator), class: 'btn btn-primary my-5' %>
 
-  <%= link_to 'Go back ', events_path, class: 'btn btn-warning my-5' %>
+  <%= link_to 'View All Events', events_path, class: 'btn btn-warning my-5' %>
 
   <ul class="list-group">
     <li class="list-group-item font-weight-bold">
