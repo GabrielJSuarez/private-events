@@ -1,9 +1,12 @@
 <div class="col-md-6 mx-auto text-center mt-3">
-  <%= render 'events/event' %>
 
-  <%= link_to 'Assist to this event', new_attendance_path, class: 'btn btn-success' %>
+  <%= show_single_event(@event) %>
+
+  <%= assist_event?(@event) %>
 
   <%= link_to 'View all users events', user_path(@event.creator), class: 'btn btn-primary my-5' %>
+
+  <%= link_to 'Go back ', events_path, class: 'btn btn-warning my-5' %>
 
   <ul class="list-group">
     <li class="list-group-item font-weight-bold">

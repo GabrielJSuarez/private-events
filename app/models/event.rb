@@ -8,5 +8,5 @@ class Event < ApplicationRecord
   validates :description, presence: true, length: { minimum: 10, maximum: 144 }
 
   scope :upcoming_events, -> { where('event_date >= ?', Time.now) }
-  scope :past_events, -> { where('event_Date < ?', Time.now)}
+  scope :past_events, -> { where('event_Date < ?', Time.now) }
 end

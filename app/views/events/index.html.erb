@@ -1,6 +1,14 @@
-<h2 class="text-center my-2">All Events</h2>
+<h1 class="text-center my-2">Events</h1>
 
-<div class="col-md-6 mx-auto text-center">
-  <%= show_events(@events) %>
+<div class="row">
+  <div class="col-md-5 mx-auto text-center">
+    <h2 class="my-2">Previous Events</h2>
+    <%= show_events(@previous_events, "danger") %>
+  </div>
+
+  <div class="col-md-5 mx-auto text-center">
+    <h2 class="my-2">Upcoming Events</h2>
+    <%= show_events(@upcoming_events, "success") %>
+  </div>
 </div>
 

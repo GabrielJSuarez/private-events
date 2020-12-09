@@ -1,11 +1,13 @@
-<div class="row">
-  <div class="col-md-4 mx-auto text-center">
-    <%= render 'events/event' %>
-    <h2>Attend the Event?</h2>
-    <%= simple_form_for @attendance do |f| %>
-      <%= f.button :submit, 'Attend to the event', class: 'btn btn-primary' %>
-    <% end %>
 
-    <%= link_to 'Go back ', user_path(current_user), class: 'btn btn-primary my-5' %>
+<h2 class="text-center my-3">Attend the Event?</h2>
+
+<div class="row pt-2">
+  <div class="col-md-4 mx-auto text-center">
+    <%= show_single_event(@event) %>
+
+    <%= simple_form_for @attendance do |f| %>
+      <%= f.button :submit, 'Attend to the event', class: 'btn btn-success' %>
+      <%= link_to 'Go back ', user_path(current_user), class: 'btn btn-warning my-5' %>
+    <% end %>
   </div>
 </div>
