@@ -1,24 +1,73 @@
 # README
+# Project: Members only!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Build with:
 
-Things you may want to cover:
+- Bootstrap 4 css implementation for Rails
+- Simple Forms Gem
+- Better Errors Gem
+- Guard Gem
 
-* Ruby version
+# Tested with:
 
-* System dependencies
+- Rspec for Rails
+- Capybara
+- Shoulda Matchers GEM
+- Webdriver Engine
 
-* Configuration
+Getting started
+Clone the repository to your local machine
 
-* Database creation
+$ `git clone https://github.com/GabrielJSuarez/private-events.git`
 
-* Database initialization
+Go to your directory
 
-* How to run the test suite
+$ `cd private-events`
 
-* Services (job queues, cache servers, search engines, etc.)
+Run in terminal [You must have Ruby installed on your system.]
 
-* Deployment instructions
+$ `bundle install`
 
-* ...
+Install the Bootstrap Dependencies Locally to show the bootstrap styling
+
+$ `yarn add bootstrap@4.3.1 jquery popper.js`
+
+the command bundle install is important to install required gem for the game to start. After you finish type:
+
+$ `rails db:migrate`
+
+This will do the proper migrations for the database, after that you can run the server:
+
+$ `rails server`
+
+Open your browser to localhost
+
+http://localhost:3000/
+
+Run tests
+$ `rspec`
+
+$ `Rubocop lint`
+
+$ `rubocop .`
+
+🤝 Contributing
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the issues page.
+
+## Authors
+
+👤 **Gabriel Suárez**
+
+- Github: @ginnandjuice(https://github.com/ginnandjuice)
+- Twitter: [@fatbaxxter](https://twitter.com/fatbaxxter)
+- Linkedin: [Gabriel Suárez](https://www.linkedin.com/in/gabriel-ginn-suarez/)
+
+
+Show your support
+Give a ⭐️ if you like this project!
+
+📝 License
+This project is MIT licensed.
+
