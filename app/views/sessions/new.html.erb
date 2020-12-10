@@ -1,0 +1,10 @@
+<h1 class="text-center my-3">Sing in</h1>
+
+<div class="row">
+  <div class="col-md-4 mx-auto text-center">
+    <%= simple_form_for :session, url: login_path do |f| %>
+      <%= f.input :name, label: 'Welcome!, please enter your name!', label_html: { class: 'my-3 font-weight-bold'}, placeholder: 'Enter your name', placeholder_html: { class: 'text-center'}, class: 'my-2'%>
+      <%= f.button :submit, 'Log in!', class: 'btn btn-primary my-2' %>
+    <% end %>
+  </div>
+</div>

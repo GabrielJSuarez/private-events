@@ -1,0 +1,21 @@
+<div class="col-md-6 mx-auto text-center mt-3">
+
+  <%= show_single_event(@event) %>
+
+  <%= assist_event?(@event) %>
+
+  <%= link_to 'View all users events', user_path(@event.creator), class: 'btn btn-primary my-5' %>
+
+  <%= link_to 'View All Events', events_path, class: 'btn btn-warning my-5' %>
+
+  <ul class="list-group">
+    <li class="list-group-item font-weight-bold">
+      Attendance List!
+    </li>
+    <% @event.attendees.each do |person| %>
+      <li class="list-group-item">
+        <%= person.name %>
+      </li>
+    <% end %>
+  </ul>
+</div>
