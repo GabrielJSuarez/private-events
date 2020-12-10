@@ -1,6 +1,8 @@
 # README
 # Project: Members only!
 
+'Members Only' project from The Odin Project, focused on the association methods and Rspec/Capybara unit/integration testing
+
 # Build with:
 
 - Bootstrap 4 css implementation for Rails
@@ -30,7 +32,7 @@ $ `bundle install`
 
 Install the Bootstrap Dependencies Locally to show the bootstrap styling
 
-$ `yarn add bootstrap@4.3.1 jquery popper.js`
+$ `yarn install`
 
 the command bundle install is important to install required gem for the game to start. After you finish type:
 

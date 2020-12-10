@@ -2,9 +2,7 @@
 
   <%= show_single_event(@event) %>
 
-  <% if current_user != @event.creator %>
-    <%= assist_event?(@event) %>
-  <% end %>
+  <%= assist_event?(@event) %>
 
   <%= link_to 'View all users events', user_path(@event.creator), class: 'btn btn-primary my-5' %>
 

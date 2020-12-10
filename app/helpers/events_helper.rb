@@ -17,9 +17,9 @@ module EventsHelper
   end
 
   def assist_event?(event)
-    return unless event.event_date >= Time.now && !event.attendees.exists?(current_user.id)
+    return unless Time.now && !event.attendees.exists?(current_user.id)
 
-    link_to 'Assist to this event', new_attendance_path, class: 'btn btn-success'
+    link_to 'Assist to this event', new_attendance_path, class: 'btn btn-success' if current_user != event.creator
   end
 
   private
